@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace XmlTask
+namespace Bll.Contract
 {
     public class Url
     {

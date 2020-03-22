@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLL.Contract\Bll.Contract.csproj" />
+    <ProjectReference Include="..\DAL.Contract\DAL.Contract.csproj" />
+    <ProjectReference Include="..\XmlTask\BLL.Contract.csproj" />
+  </ItemGroup>
+
+</Project>

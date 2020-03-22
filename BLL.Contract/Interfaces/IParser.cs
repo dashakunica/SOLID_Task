@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace XmlTask.Interfaces
+namespace Bll.Contract
 {
     public interface IParser<TSource, TResult>
     {

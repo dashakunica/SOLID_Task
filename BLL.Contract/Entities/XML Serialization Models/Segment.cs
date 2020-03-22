@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System.Collections.Generic;
 
-namespace XmlTask
+namespace Bll.Contract
 {
     public class Segments
     {

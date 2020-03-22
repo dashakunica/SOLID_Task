@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace XmlTask
+namespace Bll.Contract
 {
     [XmlRoot("urlAddresses")]
     public class Urls

@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace XmlTask
+namespace Bll.Contract
 {
     public class UrlXML
     {
