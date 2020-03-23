@@ -1,6 +1,7 @@
 ﻿using System;
 using DepensyInjection;
 using Bll.Contract;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ConsoleClient
 {

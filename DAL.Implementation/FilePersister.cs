@@ -10,7 +10,7 @@ namespace DAL.Implementation
 
         public FilePersister(string path)
         {
-            this.path = path ?? throw new ArgumentNullException(nameof(path));
+            this.path = path;
         }
 
         public void Save(XDocument source)

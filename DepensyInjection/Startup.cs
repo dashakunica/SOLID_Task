@@ -7,6 +7,7 @@ using DAL.Contract;
 using DAL.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 
 namespace DepensyInjection
@@ -17,12 +18,15 @@ namespace DepensyInjection
         {
             IServiceCollection services = new ServiceCollection();
 
-            string inputFilePath = "input.txt";
-            string outputFilePath = "output.xml";
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("Configuration.json");
+
+            IConfiguration config = builder.Build();
 
             try
             {
-                services.AddSingleton<IProvider<string>>(new FileProvider(inputFilePath));
+                services.AddSingleton<IProvider<string>>(new FileProvider(config["InputFilePath"]));
             }
             catch (FileNotFoundException)
             {
@@ -31,8 +35,9 @@ namespace DepensyInjection
 
             services.AddSingleton<ILogger, LogAdapter>()
                     .AddSingleton<IParser<string, Url>, Parser>()
-                    .AddSingleton<IConverter<IEnumerable<string>, Urls>, ToXDocumentConverter>()
-                    .AddSingleton<IPersister<Urls>>(new FilePersister(outputFilePath))
+                    .AddSingleton<IValidator<string>, Validator>()
+                    .AddSingleton<IConverter<string, Urls>, StringToEntetiesConverter>()
+                    .AddSingleton<IPersister<Urls>>(new FilePersister(config["OutputFilePath"]))
                     .AddSingleton<IDataManager, ManagerSaver<IEnumerable<string>, Urls>>();
 
             return services.BuildServiceProvider();

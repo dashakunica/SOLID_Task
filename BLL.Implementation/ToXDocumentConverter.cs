@@ -5,7 +5,7 @@ using Bll.Contract;
 
 namespace BLL.Implementation
 {
-    public class ToXDocumentConverter
+    public class ToXDocumentConverter : IConverter<string, XElement>
     {
         private readonly ILogger logger;
         private readonly IParser<string, Url> parser;
@@ -18,14 +18,13 @@ namespace BLL.Implementation
             this.validator = validator;
         }
 
-        public XDocument Convert(IEnumerable<string> source)
+        public IEnumerable<XElement> Convert(IEnumerable<string> source)
         {
             if (source == null)
             {
                 throw new ArgumentNullException(nameof(source));
             }
 
-            List<XElement> elements = new List<XElement>();
             foreach (var line in source)
             {
                 if (!this.validator.IsValid(line))
@@ -35,14 +34,9 @@ namespace BLL.Implementation
                 else
                 {
                     var url = parser.Parse(line);
-                    elements.Add(UrlToXElement(url));
+                    yield return UrlToXElement(url);
                 }
             }
-
-            XDocument document = new XDocument();
-            document.Add(new XElement("urlAddresses", elements));
-
-            return document;
         }
 
         private XElement UrlToXElement(Url url)
