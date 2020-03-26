@@ -1,0 +1,13 @@
+{
+  "InputFilePath": "C:\\Users\\User\\source\\repos\\NET.Winter.2020.Kunickaya.25\\trades.txt",
+  "OutputFilePath": "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\User\\source\\repos\\NET.Winter.2020.Kunickaya.25\\DepensyInjection\\Database.mdf;Integrated Security=True",
+
+  "exclude": [
+    "**/bin",
+    "**/bower_components",
+    "**/jspm_packages",
+    "**/node_modules",
+    "**/obj",
+    "**/platforms"
+  ]
+}

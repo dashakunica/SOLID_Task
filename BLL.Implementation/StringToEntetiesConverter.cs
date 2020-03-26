@@ -70,6 +70,5 @@ namespace BLL.Implementation
 
             return result;
         }
-
     }
 }
