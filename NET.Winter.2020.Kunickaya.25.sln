@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL.Implementation", "DAL.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bll.Contract", "BLL.Contract\Bll.Contract.csproj", "{6F494239-F255-463C-A541-424E936EE530}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Implementaion2", "BLL.Implementaion\BLL.Implementaion2.csproj", "{8B8B3C30-0CD4-45F4-BD34-28F732A92EA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL.Implementaion2", "BLL.Implementaion\BLL.Implementaion2.csproj", "{8B8B3C30-0CD4-45F4-BD34-28F732A92EA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.Implementation2", "DAL.Implementation2\DAL.Implementation2.csproj", "{F8D3C405-AD48-4248-B5C5-B11329FE26C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL.Implementation2", "DAL.Implementation2\DAL.Implementation2.csproj", "{F8D3C405-AD48-4248-B5C5-B11329FE26C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.Implementation3", "DAL.Implementation3\DAL.Implementation3.csproj", "{ACF8E85E-C053-4B53-8D37-060B1C702E5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{F8D3C405-AD48-4248-B5C5-B11329FE26C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8D3C405-AD48-4248-B5C5-B11329FE26C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8D3C405-AD48-4248-B5C5-B11329FE26C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF8E85E-C053-4B53-8D37-060B1C702E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF8E85E-C053-4B53-8D37-060B1C702E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF8E85E-C053-4B53-8D37-060B1C702E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF8E85E-C053-4B53-8D37-060B1C702E5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
